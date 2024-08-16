@@ -1,0 +1,53 @@
+# Node.js dependencies
+/node_modules
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+/node_modules
+/bower_components
+
+# Production
+/build
+/dist
+
+# Miscellaneous
+.DS_Store
+*.log
+*.lock
+*.env
+
+# Vercel deployment
+.vercel
+
+# Optional npm cache directory
+.npm
+
+# Local development
+*.local
+
+# Coverage directory used by tools like jest
+/coverage
+
+# Node REPL history
+.node_repl_history
+
+# Build artifacts
+/build
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Package lock files
+/package-lock.json
+/yarn.lock

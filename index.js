@@ -1,10 +1,18 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors'); // Import cors
 
 const app = express();
 const statsFilePath = path.join(__dirname, 'stats.json');
 
+// Configure CORS to allow requests from your React app's URL and GitHub Pages
+const corsOptions = {
+  origin: ['http://localhost:5173', 'https://soham-padia.github.io'], // Allow multiple origins
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions)); // Apply CORS options
 app.use(express.json());
 
 // Endpoint to get stats
