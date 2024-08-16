@@ -15,6 +15,7 @@ const corsOptions = {
 app.use(cors(corsOptions)); // Apply CORS options
 app.use(express.json());
 
+
 // Endpoint to get stats
 app.get('/stats', (req, res) => {
   fs.readFile(statsFilePath, 'utf-8', (err, data) => {
@@ -39,5 +40,9 @@ app.post('/update-stats', (req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
+export default app;
